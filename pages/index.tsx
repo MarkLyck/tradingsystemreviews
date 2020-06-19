@@ -10,7 +10,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to Trading System <a href="https://nextjs.org">Reviews!</a>
+          <a href="/reviews/weeklystocktip">Weekly Stocktip Review</a>
         </h1>
       </main>
 
