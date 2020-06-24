@@ -3,7 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import Router from 'next/router'
 import Layout from 'lib/layout'
-
+import '~/common/iconLibrary'
 // Scroll to top on all route changes
 Router.events.on('routeChangeComplete', () => {
   window.scrollTo(0, 0)
