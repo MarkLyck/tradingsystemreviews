@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import theme from '~/common/theme'
 
 const typography = css`
   h1 {
@@ -34,6 +35,10 @@ const typography = css`
   h4 {
     text-align: center;
     margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    color: ${theme.palette.typography.subtitle};
   }
 
   p {

@@ -13,13 +13,22 @@ const theme = {
       light: '#F9F9FC',
       lightGray: '#F5F7FA',
     },
-    typography: {},
+    typography: {
+      subtitle: '#4E5F70',
+    },
     scale: {
       worst: {
         color: 'white',
         background: '#F3446C',
       },
-      bad: '#ff9800',
+      bad: {
+        color: 'white',
+        background: '#FF6800',
+      },
+      neutral: {
+        color: 'black',
+        background: '#f9dd4d',
+      },
       okay: '#f9dd4d',
       good: '#1D93F2',
       excellent: {

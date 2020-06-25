@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReviewContainer, Disclaimer, TagsContainer, Tag, Quote, Color } from '~/ui-components'
+import { ReviewContainer, Disclaimer, TagsContainer, Tag, Quote, Color, Image } from '~/ui-components'
 
 const WeeklyStocktipReview = () => (
   <ReviewContainer>
@@ -14,7 +14,7 @@ const WeeklyStocktipReview = () => (
         blocker.
       </p>
     </Disclaimer>
-    <section>
+    <section data-type="asset-types">
       <h2>Asset Types</h2>
       <h4>What types of assets does this system use?</h4>
       <TagsContainer>
@@ -34,21 +34,21 @@ const WeeklyStocktipReview = () => (
         <b>not scammy penny-stocks</b>, which is a good sign! 👍
       </p>
     </section>
-    <section>
+    <section data-type="strategy">
       <h2>Strategy</h2>
       <h4>How does it work?</h4>
       <TagsContainer>
         <Tag icon="📈">Value / Growth investing</Tag>
         <Tag icon="🤖">Algorithmic</Tag>
-        <Tag icon="🤖">Responsible AI</Tag>
         <Tag icon="👍">Proven strategy</Tag>
-        <Tag icon="💯">Only invests in high quality companies</Tag>
+        <Tag icon="🤖">Responsible AI</Tag>
+        <Tag icon="💯">High quality companies</Tag>
         <Tag icon="🔎">Fully transparent</Tag>
       </TagsContainer>
       <p>
         Weekly Stock tip is an <b>algorithmic trading system</b>. The signals are provided by a computer algorithm
-        rather than a human investor. Algo trading has a lot of upsides, but also some potential pitfalls we'll cover
-        later.
+        rather than a human investor. Algorithmic trading has a lot of upsides, but also some potential pitfalls we'll
+        cover later.
       </p>
       <p>
         It is a <b>value & growth investment strategy</b>. The system analyzes all stocks in the stock market from a
@@ -95,7 +95,7 @@ const WeeklyStocktipReview = () => (
         Their website also mentions artificial intelligence, but it was not obvious how exactly they use it. So I asked
         Weekly. Stocktip and this is what they said:
       </p>
-      <Quote>
+      <Quote author="Weekly Stocktip">
         "The <b>AI part is not deeply integrated into the algorithms</b> themselves. Instead, it's a thin layer that
         takes all the outputs of the algorithms and uses statistical probability to sum it all up to a simplified score
         between -100 and +100, which the system uses to determine the Weekly Stocktip."
@@ -119,7 +119,7 @@ const WeeklyStocktipReview = () => (
         week. In contrast, it would take a full team of human value investors weeks to do the same.
       </p>
     </section>
-    <section>
+    <section data-type="statistics">
       <h2>Statistics</h2>
       <h4>Show me the numbers!</h4>
       <TagsContainer>
@@ -129,8 +129,7 @@ const WeeklyStocktipReview = () => (
         <Tag icon="💯">Excellent Gain-to-pain ratio</Tag>
         <Tag icon="💯">Excellent Sortino ratio</Tag>
         <Tag icon="✅">Reliable testing period</Tag>
-        <Tag icon="😐">Dependant on market movements</Tag>
-        <Tag type="bad" icon="🚩">
+        <Tag type="worst" icon="👎">
           high max drawdown in recessions
         </Tag>
         <Tag icon="🔎">Fully transparent</Tag>
@@ -167,7 +166,7 @@ const WeeklyStocktipReview = () => (
         I also asked for the realtime results from 2009 to 2019. The numbers from this period were actually slightly
         higher but still statistically close to the numbers from the full period. Weekly Stocktip said:
       </p>
-      <Quote>
+      <Quote author="Weekly Stocktip">
         "The statistics since our launch in 2009 are incorporated into the overall statistics. We generally don't show
         the numbers separately because we haven't yet hit a major market crash since we launched, which makes the
         statistics seem better than they "should" be in the long-term. The statistics since 1970 provides more accurate
@@ -179,7 +178,7 @@ const WeeklyStocktipReview = () => (
         there are enough trades to be statistically significant.
       </p>
       <p>Weekly Stocktip on holding periods:</p>
-      <Quote>
+      <Quote author="Weekly Stocktip">
         "The system re-evaluates it's portfolio every week trying to figure out when it's time to sell each signal.
         There are several algorithms to trigger a sell for either a positive return or to limit a possible loss. There
         is also a hard deadline set at four years. This deadline is very rarely hit, but if it happens, it will sell the
@@ -209,7 +208,7 @@ const WeeklyStocktipReview = () => (
         Let's talk about those Max Drawdowns. Max drawdown depicts the loss from the highest portfolio balance to the
         lowest portfolio balance.{' '}
       </p>
-      <img alt="backtested chart" />
+      <Image src="/static/weeklystocktip/backtested_chart.png" alt="backtested chart" />
       <p>
         Looking at the chart confirms that{' '}
         <b>the portfolio dropped almost 50% in value from January 1973 to December 1974</b>. This period is well known
@@ -217,6 +216,31 @@ const WeeklyStocktipReview = () => (
         Stocktip a pass on this one, especially since they fully recovered from those losses in less than a year later.
         In comparison, it took the S&P500 about six years to recover from the crash. [PASS]
       </p>
+    </section>
+    <section data-type="backtesting">
+      <h2>Backtesting</h2>
+      <h4>
+        We know Weekly Stocktip uses backtesting on their algorithms, but how ethical are they, and do they match
+        real-world performance?
+      </h4>
+      <p>
+        With any algorithmic trading system that utilizes a backtest, you have to make sure the conducting of the
+        backtest is ethical.
+      </p>
+      <p>
+        Luckily Weekly Stocktip is ahead of the curve and already has an in-depth article that goes above anything I
+        could post about it here:{' '}
+        <a href="https://medium.com/@weeklystocktip/backtesting-bias-and-how-to-avoid-it-f10c764d9886">
+          https://medium.com/@weeklystocktip/backtesting-bias-and-how-to-avoid-it-f10c764d9886
+        </a>
+      </p>
+      <p>I highly encourage you to read this article in depth and make your own judgment.</p>
+      <p>
+        I am not too concerned about the backtesting methodology for Weekly Stoocktip because it's not a new company or
+        strategy. They launched the system in 2009 and has a long-standing track record.
+      </p>
+    </section>
+    <section data-type="realtime">
       <h2>Realtime results</h2>
       <h4>
         So the strategy is good, the statistics are impressive. But none of that matters if the realtime results don't
@@ -231,7 +255,7 @@ const WeeklyStocktipReview = () => (
         Luckily since Weekly Stocktip isn't a new company and launched back in 2009 over 11 years ago, they already have
         an extensive track record we can review.
       </p>
-      <img alt="live performance chart" />
+      <Image src="/static/weeklystocktip/realtime_chart.png" alt="live performance chart" />
       <p>
         This chart shows how the portfolio developed from 2009 until June 2020 compared to the DJIA (Dow Jones
         Industrial Average), so if this is correct. <b>Weekly Stocktip earned a total accumulative return of +1,482%</b>
@@ -239,7 +263,7 @@ const WeeklyStocktipReview = () => (
         into buying more stocks. In comparison investing your money in an index fund like the S&P500 or DJIA would only
         have netted about +217% return in the same period.
       </p>
-      <img alt="latest sells" />
+      <Image size="large" src="/static/weeklystocktip/latest_sells.png" alt="latest sells" />
       <p>
         Weekly Stocktip publically provides a list of the latest ten sell signals, as shown above. After using the
         system for a few months now,{' '}
@@ -259,7 +283,7 @@ const WeeklyStocktipReview = () => (
         I'll give Weekly Stocktip a 10/10 for transparency showing the latest signals, whether positive or negative.
       </p>
     </section>
-    <section>
+    <section data-type="my-results">
       <h2>My results using Weekly Stocktip</h2>
       <h4>What were my actual results using Weekly Stocktip over a period of 4 months?</h4>
       <TagsContainer>
@@ -273,25 +297,25 @@ const WeeklyStocktipReview = () => (
         A lot of you are probably most interested in how much I made/lost using this system. I have now used Weekly
         Stocktip for X weeks in a separate trading account.
       </p>
-      <p>Here is a screenshot of my current Weekly Stocktip portfolio as of xx/xx/2020</p>
-      <img alt="current portfolio results" />
+      <p>Here is a screenshot of my current Weekly Stocktip portfolio as of May 28th, 2020</p>
+      <Image src="/static/weeklystocktip/current_portfolio.jpg" alt="current portfolio results" />
       <p>
         I invested in every signal Weekly Stocktip has put out with my own money, and{' '}
         <b>all of them have been positive</b>. But remember that the average holding period is quite long, so I'm still
         holding onto these stocks and can't write it all off to "pure" profit just yet.
       </p>
-      <p>During my subscription so far, I have seen five sell signals:</p>
+      <p>During my subscription so far, I have seen six sell signals:</p>
+      <Image src="/static/weeklystocktip/sell_signals.jpg" alt="sell signals" />
       <p>
-        APEI, WHG, & PBF I didn't get a chance to buy because the BUY signals for these happened before I signed up.
-        However, both FLR and GII, I was able to buy and sell at a profit within a few weeks, here are my results
-        compared to Weekly Stocktip:
+        APEI, WHG, PBF, & WSTG I didn't get a chance to buy because the BUY signals for these happened before I signed
+        up. However, both FLR, GII, I was able to buy and sell at a profit within a few weeks.
       </p>
       <p>
         I was able to buy and sell these stocks at comparable prices to the ones recommended, and more importantly, the
         signals don't seem to be the kind where you have to drop everything to be ready to trade at any time.
       </p>
     </section>
-    <section>
+    <section data-type="risk">
       <h2>Risk</h2>
       <h4>
         Let's be real, any investment has some kind of risk involved, and Weekly Stocktip is not exempt from that
@@ -300,7 +324,9 @@ const WeeklyStocktipReview = () => (
       <TagsContainer>
         <Tag icon="✅">Very safe long-term</Tag>
         <Tag icon="🤖">Invests without emotions</Tag>
-        <Tag icon="😐">Dependant on the market</Tag>
+        <Tag type="neutral" icon="😐">
+          Dependant on the market
+        </Tag>
       </TagsContainer>
       <p>
         We already know the Gain-to-Pain ratio, Sortino ratio, win ratio, and all these other statistics deem Weekly
@@ -312,7 +338,7 @@ const WeeklyStocktipReview = () => (
         the DJIA chart from the same period on two different scales, and they look almost identical! The only difference
         is that Weekly Stocktip goes from 0% to +1,500% and DJIA goes from 0 to +250%. [Question mark]
       </p>
-      <img alt="Weekly Stocktip vs DJIA" />
+      <Image src="/static/weeklystocktip/ws_vs_djia.png" alt="Weekly Stocktip vs DJIA" />
       <p>So what gives? If Weekly Stocktip is so dependant on the market performance, how do they outperform it?</p>
       <p>
         It's all about the stocks they pick and the value/growth strategy they use. In general, when the stock market
@@ -343,7 +369,7 @@ const WeeklyStocktipReview = () => (
         <p>Weekly Stocktip seems to be a very safe long-term investment.</p>
       </p>
     </section>
-    <section>
+    <section data-type="signals">
       <h2>Signals</h2>
       <h4>Let's talk about the signals themselves.</h4>
       <TagsContainer>
@@ -354,22 +380,22 @@ const WeeklyStocktipReview = () => (
         Weekly Stocktip is about as simple as they come. They provide one BUY signal every Monday. The signal is visible
         in the dashboard, and they also send it out as an email and SMS so you won't miss it.
       </p>
-      <img alt="Weekly Stocktip signal" />
+      <Image src="/static/weeklystocktip/buy_signal.png" alt="Buy signal" />
       <p>
         They have a whole bunch of information about the signal they release, most importantly the AI Score summary:
       </p>
-      <img alt="AI Score" />
+      <Image src="/static/weeklystocktip/ai_score.png" alt="AI Score" />
       <p>
         All this signal says, is to "BUY XXX at a price near X.XX." That's all you need to know to follow the system.
       </p>
       <p>Later you will get a SELL signal for this same stock:</p>
-      <img alt="Sell signal" />
+      <Image src="/static/weeklystocktip/sell_signal.png" alt="Sell signal" />
       <p>This just means: "SELL all your shares in XXX."</p>
       <p>
         So how does this compare to other signal services? Well, the first thing I noticed is that there is no stop-loss
         and no target price. So I asked Weekly Stocktip about this, and they said:
       </p>
-      <Quote>
+      <Quote author="Weekly Stocktip">
         "The system is fully dynamic. It re-evaluates its portfolio positions every week; thus, its target price and
         stop-loss also change weekly based on its financials.
         <br />
@@ -388,7 +414,7 @@ const WeeklyStocktipReview = () => (
         complexities of investing.
       </p>
     </section>
-    <section>
+    <section data-type="stock-screener">
       <h2>Stock screener</h2>
       <h4>Weekly Stocktip comes with a Stock Screening tool</h4>
       <TagsContainer>
@@ -433,7 +459,7 @@ const WeeklyStocktipReview = () => (
         <b>This proves that the system evaluates companies based on real value investment principles.</b>
       </p>
     </section>
-    <section>
+    <section data-type="pricing">
       <h2>Pricing</h2>
       <h4>Access to Weekly Stocktip will cost you $29 a week. Or, in other words, $29 per signal.</h4>
       <TagsContainer>
@@ -447,26 +473,26 @@ const WeeklyStocktipReview = () => (
         could easily charge $25,000 a year for this system, and it would still be a bargain. If this system really
         works, why does it only cost $29 to get access?
       </p>
-      <Quote>
+      <Quote author="Mark Lyck - Co-Founder of Weekly Stocktip">
         "Hello Michael,
         <br /> <br />
         You're entirely correct, Weekly Stocktip's $29 a week subscription doesn't cover our data costs. But it was
         never built to be hugely profitable. At our core, we're a money management company, and we provide private money
         management services, this is where we make the bulk of our profits.
         <br /> <br />
-        We are planning to expand this section by creating a hedge fund with our value system. However, that is a
+        We are planning to expand this section by creating a hedge fund with our value strategy. However, that is a
         massive undertaking that will likely take us years. So while we are building a hedge fund and making sure our
-        algorithms can handle AUM capital, we decided to provide access to our top signals for a very affordable price.
-        In return, we get some publicity and good reviews. If we can help hundreds of people to accumulate more wealth
-        for just $29 a week and have hundreds of happy users when it comes to the funding round of hedge funds, we will
-        already have a public record, and a lot of proof of our system working realtime. We will be able to get the ball
-        rolling sooner."
+        algorithms can handle large AUM capital, we decided to provide access to our top signals for a very affordable
+        price. In return, we get some publicity and good reviews. If we can help hundreds of people to accumulate more
+        wealth for just $29/week and have hundreds of happy users when it comes to the funding round of hedge funds, we
+        will already have a brilliant public record, and a lot of proof of our system working in realtime. We will be
+        able to get the ball rolling sooner."
       </Quote>
       <p>
         Wow, A lot to unpack here! So that explains why they are willing to sell access to this for just $29, but it
         also raises the question of what will happen to Weekly Stocktip when they go public with a fund? Mark said this:
       </p>
-      <Quote>
+      <Quote author="Weekly Stocktip">
         "If or when we open a hedge fund with the system, we will close Weekly Stocktip for new subscribers, existing
         subscribers will continue to have access to the system for at least one year after launch. All existing
         subscribers will also be given the opportunity to invest in the hedge fund at a better buy-in price."
@@ -476,32 +502,14 @@ const WeeklyStocktipReview = () => (
         equity for a fund later on. I'll give Weekly Stocktip a pass on the pricing being suspiciously cheap. 👍
       </p>
     </section>
-    <section>
-      <h2>Backtesting</h2>
-      <h4>
-        We know Weekly Stocktip uses backtesting on their algorithms, but how ethical are they, and do they match
-        real-world performance?
-      </h4>
-      <p>
-        With any algorithmic trading system that utilizes a backtest, you have to make sure the conducting of the
-        backtest is ethical.
-      </p>
-      <p>
-        Luckily Weekly Stocktip is ahead of the curve and already has an in-depth article that goes above anything I
-        could post about it here:{' '}
-        <a href="https://medium.com/@weeklystocktip/backtesting-bias-and-how-to-avoid-it-f10c764d9886">
-          https://medium.com/@weeklystocktip/backtesting-bias-and-how-to-avoid-it-f10c764d9886
-        </a>
-      </p>
-      <p>I highly encourage you to read this article in depth and make your own judgment.</p>
-      <p>
-        I am not too concerned about the backtesting methodology for Weekly Stoocktip because it's not a new company or
-        strategy. They launched the system in 2009 and has a long-standing track record.
-      </p>
-    </section>
-    <section>
+    <section data-type="support">
       <h2>Support</h2>
       <h4>How good and honest is the support they provide?</h4>
+      <TagsContainer>
+        <Tag icon="⚡">Usually responds in under 5 minutes</Tag>
+        <Tag icon="🤝">Honest</Tag>
+        <Tag icon="🎓">knowledgeable about investing</Tag>
+      </TagsContainer>
       <p>
         I am probably one of the most annoying customers they've ever had with all my questions, but{' '}
         <b>the support was outstanding</b>, they answered all my questions. They responded to my regular inquiries
@@ -509,9 +517,12 @@ const WeeklyStocktipReview = () => (
         later.
       </p>
     </section>
-    <section>
+    <section data-type="user-experience">
       <h2>User Experience</h2>
       <h4>How user friendly is Weekly Stocktip?</h4>
+      <TagsContainer>
+        <Tag icon="👌">Super easy to use</Tag>
+      </TagsContainer>
       <p>
         Using Weekly Stocktip was very easy. After you sign up, you can immediately see the current signal, and you just
         follow it once a week. Technically you don't even have to log in to the platform if you don't want to.
@@ -530,9 +541,15 @@ const WeeklyStocktipReview = () => (
         compared to a day or intra-day trading system!
       </p>
     </section>
-    <section>
+    <section data-type="barrier-to-entry">
       <h2>Barrier to Entry</h2>
       <h4>Who can use it, and how much setup, time and preparation is required?</h4>
+      <TagsContainer>
+        <Tag icon="🌎">Accessible from anywhere in the world</Tag>
+        <Tag icon="👍">Simple BUY/SELL signals</Tag>
+        <Tag icon="🎉">No training required</Tag>
+        <Tag icon="💰">Affordable price</Tag>
+      </TagsContainer>
       <p>
         Weekly Stocktip has a very low barrier to entry, with a price anyone can afford and trading stocks accessible
         from anywhere in the world.
@@ -542,12 +559,17 @@ const WeeklyStocktipReview = () => (
         NYSE.
       </p>
     </section>
-    <section>
+    <section data-type="history">
       <h2>History & Background Check</h2>
       <h4>
         When it comes to investing your money in ideas from other people (or the people who build the algorithms), you
         better make sure those people aren't scammers.
       </h4>
+      <TagsContainer>
+        <Tag icon="🤝">longstanding company</Tag>
+        <Tag icon="👍">Background in finance & tech</Tag>
+        <Tag icon="📈">Solid track record</Tag>
+      </TagsContainer>
       <p>
         The Founder of Weekly Stocktip is Mark Lyck. Mark has a background in{' '}
         <b>business administration & economics as well as computer science</b>. The team was very knowledgeable about
@@ -565,12 +587,21 @@ const WeeklyStocktipReview = () => (
         directly, they don't have to register with the SEC.
       </p>
     </section>
-    <section>
+    <section data-type="summary">
       <h2>Summary</h2>
       <h4>
         Weekly Stocktip seems like a reputable company with a very successful strategy. They are fully transparent about
         their results. It is straightforward to use, and the signals I invested in all turned out profitable.
       </h4>
+      <TagsContainer>
+        <Tag icon="📈">High reward</Tag>
+        <Tag icon="👌">Low risk</Tag>
+        <Tag icon="🔎">Transparent company</Tag>
+        <Tag icon="💯">Excellent Track record</Tag>
+        <Tag icon="📈">Consistently beats the Stock Market</Tag>
+        <Tag icon="💰">100% Money Back Guarantee</Tag>
+        <Tag icon="📈">Performance Guarantee</Tag>
+      </TagsContainer>
       <p>
         Weekly Stocktip is the only trading system I have ever used, I've invested more than $1,000 with and will
         continue to use in the future.
