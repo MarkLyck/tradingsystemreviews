@@ -32,6 +32,11 @@ const typography = css`
     margin-bottom: 16px;
   }
 
+  h3 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
   h4 {
     text-align: center;
     margin-bottom: 24px;

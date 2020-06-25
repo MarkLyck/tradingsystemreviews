@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Router from 'next/router'
 import Layout from 'lib/layout'
 import '~/common/iconLibrary'
+import 'antd/dist/antd.css'
 // Scroll to top on all route changes
 Router.events.on('routeChangeComplete', () => {
   window.scrollTo(0, 0)
