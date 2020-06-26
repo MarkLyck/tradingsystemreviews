@@ -1,5 +1,6 @@
 import React from 'react'
 import { ReviewContainer, Disclaimer, TagsContainer, Tag, Quote, Color, Image } from '~/ui-components'
+import Statistics from './Statistics'
 
 const WeeklyStocktipReview = () => (
   <ReviewContainer>
@@ -7,11 +8,8 @@ const WeeklyStocktipReview = () => (
     <Disclaimer>
       <p>
         I did not get paid to write this review, I did not receive free access to the service, nor I'm not getting any
-        referral payments from this company.
-      </p>
-      <p>
-        Our ads help keep the reviews objective and honest, so please consider supporting us by turning off your ad
-        blocker.
+        referral payments from this company. Our ads help keep the reviews objective and honest, so please consider
+        supporting us by turning off your ad blocker.
       </p>
     </Disclaimer>
     <section data-type="asset-types">
@@ -20,25 +18,24 @@ const WeeklyStocktipReview = () => (
       <TagsContainer>
         <Tag icon="🇺🇸">US Stocks</Tag>
         <Tag icon="🏦">Traded on major exchanges</Tag>
-        <Tag icon="👍">Small to mega-cap</Tag>
+        <Tag icon="👍">Minimum market cap</Tag>
         <Tag icon="✅">No scammy penny stocks</Tag>
         <Tag icon="🌎">Can be traded from anywhere in the world</Tag>
       </TagsContainer>
       <p>
-        Weekly Stock tip specializes in <b>US stocks</b>. Stocks are the only asset they provide signals for.
-        Specifically, their system only analyzes stocks trading on the US exchanges for at least 7 years with a market
-        cap of at least $4.5 million.
+        Weekly Stocktip provides trading signals for <b>stocks on the three major US exchanges</b>: NYSE, Nasdaq & AMEX.
       </p>
       <p>
-        In short, this means that they only invest in established medium-to-large cap companies and{' '}
-        <b>not scammy penny-stocks</b>, which is a good sign! 👍
+        All stocks in the system must have <b>at least seven years of financial reports</b> and SEC filings available
+        for analysis. It also filters out any stocks with a market cap under $4.5 million. 👍
       </p>
+      <p>These assets can easily be traded anywhere in the world from a standard brokerage account</p>
     </section>
     <section data-type="strategy">
       <h2>Strategy</h2>
-      <h4>How does it work?</h4>
+      <h4>How does it beat the market?</h4>
       <TagsContainer>
-        <Tag icon="📈">Value / Growth investing</Tag>
+        <Tag icon="📈">Value investing</Tag>
         <Tag icon="🤖">Algorithmic</Tag>
         <Tag icon="👍">Proven strategy</Tag>
         <Tag icon="🤖">Responsible AI</Tag>
@@ -46,14 +43,15 @@ const WeeklyStocktipReview = () => (
         <Tag icon="🔎">Fully transparent</Tag>
       </TagsContainer>
       <p>
-        Weekly Stock tip is an <b>algorithmic trading system</b>. The signals are provided by a computer algorithm
-        rather than a human investor. Algorithmic trading has a lot of upsides, but also some potential pitfalls we'll
-        cover later.
+        Weekly Stocktip is an <b>algorithmic trading system</b>. That means complex computer algorithms provide the BUY
+        and SELL signals instead of a human investor. Algorithmic trading has many upsides since it doesn't make human
+        mistakes or have to deal with human emotions, but only if done ethically. (we'll get into those pitfalls later)
       </p>
       <p>
-        It is a <b>value & growth investment strategy</b>. The system analyzes all stocks in the stock market from a
-        pure business evaluation perspective just as you'd expect a value investor to do.
+        Weekly Stocktip uses a <b>value investment strategy</b>. The system analyzes all stocks in the current market
+        from a pure business evaluation perspective as you'd expect any value investor to do.
       </p>
+      <h3>What is value investing?</h3>
       <p>
         If you haven't heard of value or growth investing before, it is the same principles used by{' '}
         <a href="https://en.wikipedia.org/wiki/Warren_Buffett" target="_blank">
@@ -63,14 +61,23 @@ const WeeklyStocktipReview = () => (
         <a href="https://en.wikipedia.org/wiki/Benjamin_Graham" target="_blank">
           Benjamin Graham
         </a>
-        , and many other top investors. In short, they only invest in stocks that are selling for cheaper than they
-        should be, based on finances and future projected earnings.
+        , and many other top investors. Value investors only invest in stocks that are trading for cheaper than their
+        "intrinsic or book value" (basically, what the company is worth).
       </p>
       <p>
-        The algorithms <a>use all financial reports, SEC filings, and stock history dating back to 1970</a> (or earliest
-        possible date) to evaluate the companies.
+        Investopedia has an excellent{' '}
+        <a href="https://www.investopedia.com/terms/v/valueinvesting.asp">article on value investing</a> if you want to
+        learn more about this approach.
       </p>
-      <p>In total, Weekly Stocktip have over 114 unique algorithms that all sum up to these six factors.</p>
+      <p>
+        What makes Weekly Stocktip unique is that they use algorithms instead of having a team of analysts. The
+        algorithms use <b>all SEC filings, financial reports, and stock pricing history dating back to 1970</b> (or
+        earliest possible date) to <b>evaluate all companies in the stock market at once</b>. Finding stocks selling for
+        much cheaper than they should is not easy. So if Weekly Stocktip has done this right, analyzing every single
+        stock all at once, provides a significant advantage in identifying which stocks are selling for cheaper than
+        they should be.
+      </p>
+      <p>Weekly Stocktip has more than 114 unique algorithms to analyze these stocks based on these six factors:</p>
       <ul>
         <li>
           <b>Risk</b> (estimated future risk)
@@ -88,17 +95,18 @@ const WeeklyStocktipReview = () => (
           <b>Soundness</b> (how sound is the business model)
         </li>
         <li>
-          <b>Stewardship</b> (how well does the company treat it's investors)
+          <b>Stewardship</b> (how well does the company treat investors)
         </li>
       </ul>
       <p>
-        Their website also mentions artificial intelligence, but it was not obvious how exactly they use it. So I asked
-        Weekly. Stocktip and this is what they said:
+        Weekly Stocktip says the system uses these factors to invest in high quality, profitable companies with good
+        growth & low risk, that treat their investors well and only buy stocks with a large margin of safety.
       </p>
+      <p>I was curious how much of this is Artificial Intelligence or machine learning. Here's what they said:</p>
       <Quote author="Weekly Stocktip">
-        "The <b>AI part is not deeply integrated into the algorithms</b> themselves. Instead, it's a thin layer that
-        takes all the outputs of the algorithms and uses statistical probability to sum it all up to a simplified score
-        between -100 and +100, which the system uses to determine the Weekly Stocktip."
+        "The <b>AI part is not deeply integrated into the algorithms</b>. Instead, it's a thin layer that takes all the
+        outputs of the algorithms and uses statistical probability to sum it all up to a more user-friendly score
+        between -100 and +100, which is what we call the AI Score."
       </Quote>
       <p>
         I am glad to see the whole system isn't just a machine learning algorithm, but there's actual logic backing
@@ -109,14 +117,11 @@ const WeeklyStocktipReview = () => (
         <a href="https://weeklystocktip.com/static/2008_Whitepaper_weeklystocktip.pdf" target="_blank">
           2008 whitepaper
         </a>{' '}
-        in detail. It is fascinating and goes a lot deeper into the strategy than I have here and describe how they
-        avoided common pitfalls.
+        in detail. It goes a lot deeper into the strategy and how they avoided common pitfalls.
       </p>
       <p>
-        Value & growth investing is a strategy that is proven to work, you don't need to look any further than Warren
-        Buffett or Benjamin Graham to find proof that this method works wonders in the longterm. Weekly Stocktip
-        innovates this by providing an algorithm that performs evaluations programmatically on thousands of stocks every
-        week. In contrast, it would take a full team of human value investors weeks to do the same.
+        Value investing is a <b>long proven strategy</b>. Combining that with an algorithmic trading approach that can
+        identify bargains in the stock market is very promising. I'll give this strategy a big 👍 (if it actually works)
       </p>
     </section>
     <section data-type="statistics">
@@ -125,7 +130,9 @@ const WeeklyStocktipReview = () => (
       <TagsContainer>
         <Tag icon="💯">Excellent win ratio</Tag>
         <Tag icon="💯">Excellent average return</Tag>
-        <Tag icon="👍">Reasonable holding period</Tag>
+        <Tag type="neutral" icon="📆">
+          Reasonable holding period
+        </Tag>
         <Tag icon="💯">Excellent Gain-to-pain ratio</Tag>
         <Tag icon="💯">Excellent Sortino ratio</Tag>
         <Tag icon="✅">Reliable testing period</Tag>
@@ -134,87 +141,92 @@ const WeeklyStocktipReview = () => (
         </Tag>
         <Tag icon="🔎">Fully transparent</Tag>
       </TagsContainer>
+      <p>Weekly Stocktip has a lot of statistics available, but I've collected the most important ones here:</p>
+      <Statistics />
       <p>
-        Win ratio: <b>+93.67%</b>
+        There's a lot to unpack there, but let's start with that +93.67% win ratio. According to this, on average, 9 out
+        of 10 of the signals they suggested to buy was sold with a profit.
       </p>
       <p>
-        Their win ratio is incredibly high. On average, 9 out of 10 of the signals they suggested to buy was sold with a
-        profit. I did have some doubts about the truth of this, but <b>so far, the results match the claim.</b>
-      </p>
-      <p>
-        The average return of a winning investment: +102.37%
+        The average return of those 9/10 signals have been +102.37%
         <br />
-        The average loss of a losing investment: -16.47%
+        The average loss of the 1/10 signals have been -16.47%
       </p>
       <p>
-        From this, we can calculate the average expected return of a stock. (0.9367 * 102.37) - (0.0633 * 16.47) ={' '}
+        So from that, we can calculate the expected return of a signal: (0.9367 * 102.37) - (0.0633 * 16.47) ={' '}
         <b>+94.85%</b>
       </p>
       <p>
-        This means if you invested in 10 average signals from Weekly Stocktip. Nine of them would result in a +100%
-        return, and only one would result in a -17% loss. If you invested $100 in each of these, you would have $900 in
-        winnings and only $17 in losses. That's a hugely disproportionate positive risk factor, and my first question
-        is, "over what period are these statistics recorded?" Maybe they picked an exceptional year to run their
-        statistics, a typical <Color color="red">red flag 🚩</Color> I often see in trading systems.
+        If you invested $100 in each of these, you would have $900 in winnings and only $17 in losses. That's a hugely
+        disproportionate positive risk factor, and my first thought is, "
+        <b>If it sounds too good to be true, it probably is.</b>" So let's analyze this a bit further.
       </p>
       <p>
-        However, after digging in a bit deeper, you'll find that these numbers are averages from 1970 to 2020. That
-        means <b>the system has been through several market crashes</b> and all sorts of market situations unscathed.
-        (that is if their backtest is ethical without flaws, which I'll get to later in the review).
+        Over what period are these statistics recorded? Perhaps they chose an exceptional year to run their statistics.
+        A typical red flag I often see in trading systems.
       </p>
       <p>
-        I also asked for the realtime results from 2009 to 2019. The numbers from this period were actually slightly
-        higher but still statistically close to the numbers from the full period. Weekly Stocktip said:
+        However, after digging deeper, you'll find that these numbers are averages from 1970 to 2020. That means{' '}
+        <b>the system has been through several market crashes</b> and all sorts of market situations unscathed. I cannot
+        understate the importance of making sure that trading systems and their statistics are recorded over an
+        acceptable period and not just during a bull run!
+      </p>
+      <p>
+        But making sure the recorded statistics are over an acceptable period isn't enough to validate this either. The
+        backtest could be flawed or straight-up fabricated. We'll get into that later in the review.
+      </p>
+      <p>
+        I also looked at the numbers for the realtime results from their launch from 2009 to 2020. The numbers from this
+        period were actually slightly better but still statistically close to the numbers from the full period (which is
+        essential). Weekly Stocktip said:
       </p>
       <Quote author="Weekly Stocktip">
-        "The statistics since our launch in 2009 are incorporated into the overall statistics. We generally don't show
-        the numbers separately because we haven't yet hit a major market crash since we launched, which makes the
-        statistics seem better than they "should" be in the long-term. The statistics since 1970 provides more accurate
-        and realistic expectations."
+        "The statistics since our launch in 2009 are incorporated into the overall statistics. However, keep in mind
+        that we haven't hit a major market crash since we launched, making the statistics look better than it should be
+        in the long-term. The 1970-2020 statistics provide more accurate and realistic expectations as it has been
+        through several recessions."
       </Quote>
       <p>
-        But are these averages statistically significant, or are they just holding onto the losers and never selling
-        them? Weekly Stocktip would have executed over 2,500 trades in the period from 1970 to 2020. I believe that
-        there are enough trades to be statistically significant.
+        So far, everything looks promising, but there's one more question you must ask when it comes to validating win
+        ratios: whether they hold their losers indefinitely and never sell them? Everyone can get a +100% win ratio if
+        they never sell the losers or only made a very few lucky trades!
       </p>
-      <p>Weekly Stocktip on holding periods:</p>
+      <p>
+        The Weekly Stocktip system executed +2,500 trades in the period from 1970 to 2020. I believe that there are
+        enough trades to be statistically significant, but I still asked them specifically about holding stocks
+        perpetually. Here's what they said:
+      </p>
       <Quote author="Weekly Stocktip">
         "The system re-evaluates it's portfolio every week trying to figure out when it's time to sell each signal.
         There are several algorithms to trigger a sell for either a positive return or to limit a possible loss. There
         is also a hard deadline set at four years. This deadline is very rarely hit, but if it happens, it will sell the
         stock, no matter its price, to prevent holding onto stocks forever.
+        <br />
+        <br /> The average holding period since our 2009 launch has been 408 days."
       </Quote>
       <p>
-        <b>The all-time average holding period is 2.2 years</b>, and the average holding period since our 2009 launch
-        has been 408 days."
-      </p>
-      <p>
         That satisfies my biggest concern about the statistics and brings the expected return in a more reasonable
-        light. <b>The +94% average return is based on a holding period of about two years</b>. But that's still a lot
-        better than the 6-8% you'll get investing in an index fund.
+        light. <b>The +94% average return is based on a holding period of +1 year</b>. But that's still a lot better
+        than the 6-8% you'll get investing in an index fund.
       </p>
       <p>
-        The holding period is on par with what you would expect from a long-term value investing system, so there are no
-        surprises.
+        The holding period is on par with what you would expect from a long-term value investing system, so no surprises
+        there.
       </p>
-      <h3>Advanced Statistics</h3>
-      <p>
-        Gain-to-Pain Ratio: 2.39697 (Excellent) Sortino Ratio: 7.532204 (Excellent) IRR Geometric Mean: +48.66%
-        (Excellent) IRR Arithmetic Mean:+108.01% (Excellent) CAGR since 1970: +34.14% (Excellent) CAGR since 1990:
-        38.04% (Excellent) CAGR since 2009: 43.72% (Excellent) Max Drawdown 36 months: -22.97% (Okay) Max Drawdown 50
-        years: -47.85% (Red flag) Percent of years outperforming the S&P500: 89% (Excellent)
-      </p>
-      <p>
-        Let's talk about those Max Drawdowns. Max drawdown depicts the loss from the highest portfolio balance to the
-        lowest portfolio balance.{' '}
-      </p>
+
       <Image src="/static/weeklystocktip/backtested_chart.png" alt="backtested chart" />
       <p>
-        Looking at the chart confirms that{' '}
-        <b>the portfolio dropped almost 50% in value from January 1973 to December 1974</b>. This period is well known
-        to be one of the worst stock market crashes in history. Given the circumstances, I'm willing to give Weekly
-        Stocktip a pass on this one, especially since they fully recovered from those losses in less than a year later.
-        In comparison, it took the S&P500 about six years to recover from the crash. [PASS]
+        Let's talk about those Max draw-downs. Max drawdown depicts the loss from the highest portfolio balance to the
+        lowest portfolio balance. Looking at the chart above confirms that the portfolio dropped almost 50% in value
+        from January 1973 to December 1974. This period is well known to be one of the worst stock-market crashes in
+        history, and the S&P500 dropped over 50% in value as well during this period. I don't love that it lost that
+        much, but at least there's a good explanation. I'm willing to give Weekly Stocktip a pass on this one,
+        especially since they fully recovered from those losses in less than a year later. In comparison, it took the
+        S&P500 about six years to recover from the crash.
+      </p>
+      <p>
+        I like that they openly share such a high maximum all-time drawdown that happens over 50 years ago. It gives me
+        some confidence in the legitimacy of their otherwise excellent numbers.
       </p>
     </section>
     <section data-type="backtesting">

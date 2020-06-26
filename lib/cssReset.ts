@@ -106,10 +106,11 @@ const cssReset = css`
   body {
     line-height: 1;
   }
-  ol,
   ul {
-    list-style: none;
+    padding-left: 32px;
+    margin-bottom: 8px;
   }
+  ol,
   blockquote,
   q {
     quotes: none;
