@@ -74,7 +74,7 @@ const WeeklyStocktipReview = () => (
           Benjamin Graham
         </a>
         , and many other top investors. Value investors only invest in stocks that are trading for cheaper than their
-        "intrinsic or book value" (basically, what the company is worth).
+        "intrinsic or book value" (basically, what the company is worth.)
       </p>
       <p>
         Investopedia has an excellent{' '}
@@ -190,7 +190,7 @@ const WeeklyStocktipReview = () => (
       <p>
         I also looked at the numbers for the realtime results from their launch from 2009 to 2020. The numbers from this
         period were actually slightly better but still statistically close to the numbers from the full period (which is
-        essential). Weekly Stocktip said:
+        essential.) Weekly Stocktip said:
       </p>
       <Quote author="Weekly Stocktip">
         "The statistics since our launch in 2009 are incorporated into the overall statistics. However, keep in mind
@@ -356,7 +356,7 @@ const WeeklyStocktipReview = () => (
       <p>All in all, the signals so far have been performing much better than expected. </p>
       <p>
         <b>Disclaimer: The entire stock market was bullish during the period of my review</b>. It's hard to know how
-        much of my success to attribute to Weekly Stocktip vs. just the market in general).
+        much of my success to attribute to Weekly Stocktip vs. just the market in general.)
       </p>
       <p>
         But given the company's transparency, you should be able to review their real-time performance and latest sell
