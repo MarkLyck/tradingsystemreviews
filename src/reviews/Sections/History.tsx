@@ -22,7 +22,7 @@ const History = () => (
     <p>Since 2011 they have been using the system for private money management.</p>
     <p>In 2014 they first provided public access to the system as a signal service.</p>
     <p>
-      The company is located in Denmark (home country of the Founder). Weekly Stocktip is not a registered financial
+      The company is located in Denmark (home country of the Founder.) Weekly Stocktip is not a registered financial
       advisor company, and you cannot deduct their service in taxes.
     </p>
   </section>
