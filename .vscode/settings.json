@@ -3,5 +3,8 @@
         "backtest",
         "investopedia",
         "scammy"
+    ],
+    "cSpell.ignoreWords": [
+        "stocktip"
     ]
 }
