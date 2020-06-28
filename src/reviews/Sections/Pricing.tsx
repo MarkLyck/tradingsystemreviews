@@ -6,9 +6,9 @@ const Pricing = () => (
     <h2>Pricing</h2>
     <h4>Access to Weekly Stocktip will cost you $29 a week. Or, in other words, $29 per signal.</h4>
     <TagsContainer>
-      <Tag icon="✅">Flat weekly fee</Tag>
-      <Tag icon="💵">Affordable: $29/wk</Tag>
-      <Tag icon="✅">Pricing explained</Tag>
+      <Tag type="neutral" icon="💵">
+        $29 a week
+      </Tag>
       <Tag icon="🔎">Fully transparent</Tag>
     </TagsContainer>
     <p>

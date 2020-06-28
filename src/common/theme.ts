@@ -9,6 +9,7 @@ const theme = {
     black: '#000000',
     white: '#ffffff',
     border: '#ebedf5',
+    disabled: '#DDD',
     background: {
       light: '#F9F9FC',
       lightGray: '#F5F7FA',
@@ -27,9 +28,12 @@ const theme = {
       },
       neutral: {
         color: 'black',
+        background: '#F5F7FA',
+      },
+      okay: {
+        color: 'black',
         background: '#f9dd4d',
       },
-      okay: '#f9dd4d',
       good: '#1D93F2',
       excellent: {
         background: '#188C62',

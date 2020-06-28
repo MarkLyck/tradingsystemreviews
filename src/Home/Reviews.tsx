@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import styled from 'styled'
 import { Table, Tag, Space } from 'antd'
 import dataSource, { IN_PROGRESS, PENDING } from './data'
+import PendingReview from '~/ui-components/Tag/PendingReview'
+import ReviewInProgress from '~/ui-components/Tag/ReviewInProgress'
 
 const TableContainer = styled.div`
   table {
@@ -15,6 +17,14 @@ const TableContainer = styled.div`
     }
   }
 `
+
+const NotAvailableText = styled.p`
+  color: ${(props) => props.theme.palette.disabled};
+  margin: 0;
+`
+
+const NotAvailable = () => <NotAvailableText>N/A</NotAvailableText>
+const Undisclosed = () => <NotAvailableText>Undisclosed</NotAvailableText>
 
 const columns = [
   {
@@ -29,16 +39,15 @@ const columns = [
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
-    render: (value) => value,
+    render: (_value, review) => review.key,
   },
   {
     title: 'Asset type',
     dataIndex: 'assetType',
     key: 'assetType',
     render: (value, review) => {
-      if (!value) {
-        return 'N/A'
-      }
+      if (value === null) return <Undisclosed />
+      if (!value) return <NotAvailable />
       return value
     },
   },
@@ -47,9 +56,9 @@ const columns = [
     dataIndex: 'strategy',
     key: 'strategy',
     render: (value, review) => {
-      if (!value) {
-        return 'N/A'
-      }
+      if (value === null) return <Undisclosed />
+      if (!value) return <NotAvailable />
+
       return value
     },
   },
@@ -58,9 +67,8 @@ const columns = [
     dataIndex: 'winRate',
     key: 'winRate',
     render: (value) => {
-      if (!value) {
-        return 'N/A'
-      }
+      if (value === null) return <Undisclosed />
+      if (!value) return <NotAvailable />
       return `${value.toFixed(2)}%`
     },
   },
@@ -69,9 +77,8 @@ const columns = [
     dataIndex: 'averageReturn',
     key: 'averageReturn',
     render: (value) => {
-      if (!value) {
-        return 'N/A'
-      }
+      if (value === null) return <Undisclosed />
+      if (!value) return <NotAvailable />
 
       return `+${value.toFixed(2)}%`
     },
@@ -81,9 +88,20 @@ const columns = [
     dataIndex: 'risk',
     key: 'risk',
     render: (value) => {
-      if (!value) {
-        return 'N/A'
-      }
+      if (value === null) return <Undisclosed />
+      if (!value) return <NotAvailable />
+
+      return `${value}`
+    },
+  },
+  {
+    title: 'Effort',
+    dataIndex: 'effort',
+    key: 'effort',
+    render: (value) => {
+      if (value === null) return <Undisclosed />
+      if (!value) return <NotAvailable />
+
       return `${value}`
     },
   },
@@ -92,9 +110,19 @@ const columns = [
     dataIndex: 'holdingPeriod',
     key: 'holdingPeriod',
     render: (value) => {
-      if (!value) {
-        return 'N/A'
-      }
+      if (value === null) return <Undisclosed />
+      if (!value) return <NotAvailable />
+
+      return value
+    },
+  },
+  {
+    title: 'Price',
+    dataIndex: 'price',
+    key: 'Price',
+    render: (value) => {
+      if (value === null) return <Undisclosed />
+      if (!value) return <NotAvailable />
 
       return value
     },
@@ -106,10 +134,10 @@ const columns = [
     fixed: 'right',
     render: (value, review) => {
       if (review.status === IN_PROGRESS) {
-        return 'Review in progress'
+        return <ReviewInProgress />
       }
       if (review.status === PENDING) {
-        return 'Pending review'
+        return <PendingReview />
       }
 
       return `${value}/100`
