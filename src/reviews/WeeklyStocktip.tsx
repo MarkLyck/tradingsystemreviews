@@ -28,9 +28,15 @@ const WeeklyStocktipReview = () => (
       <h2>Asset Types</h2>
       <h4>What types of assets does this system use?</h4>
       <TagsContainer>
-        <Tag icon="🇺🇸">US Stocks</Tag>
-        <Tag icon="🏦">Traded on major exchanges</Tag>
-        <Tag icon="👍">Minimum market cap</Tag>
+        <Tag type="neutral" icon="🇺🇸">
+          US Stocks
+        </Tag>
+        <Tag type="neutral" icon="🏦">
+          Traded on major exchanges
+        </Tag>
+        <Tag type="neutral" icon="💰">
+          $4.5m minimum market cap
+        </Tag>
         <Tag icon="✅">No scammy penny stocks</Tag>
         <Tag icon="🌎">Can be traded from anywhere in the world</Tag>
       </TagsContainer>
@@ -47,13 +53,13 @@ const WeeklyStocktipReview = () => (
       <h2>Strategy</h2>
       <h4>How does it beat the market?</h4>
       <TagsContainer>
-        <Tag icon="📈">Value investing</Tag>
+        <Tag type="neutral" icon="📈">
+          Value investing
+        </Tag>
         <Tag type="neutral" icon="🤖">
           Algorithmic
         </Tag>
         <Tag icon="👍">Proven strategy</Tag>
-        <Tag icon="🤖">Responsible AI</Tag>
-        <Tag icon="💯">High quality companies</Tag>
         <Tag icon="🔎">Fully transparent</Tag>
       </TagsContainer>
       <p>
@@ -146,8 +152,8 @@ const WeeklyStocktipReview = () => (
       <h4>Show me the numbers!</h4>
       <TagsContainer>
         <Tag icon="✅">Excellent statistics</Tag>
-        <Tag type="neutral" icon="📆">
-          Reasonable holding period
+        <Tag type="okay" icon="📆">
+          Long holding period
         </Tag>
         <Tag icon="✅">Reliable testing period</Tag>
         <Tag type="worst" icon="👎">

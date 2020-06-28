@@ -8,8 +8,8 @@ const Risk = () => (
     <TagsContainer>
       <Tag icon="✅">Very safe long-term</Tag>
       <Tag icon="🤖">Invests without emotions</Tag>
-      <Tag type="neutral" icon="😐">
-        Dependant on the market
+      <Tag type="okay" icon="😐">
+        Very dependant on the market
       </Tag>
     </TagsContainer>
     <p>

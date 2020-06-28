@@ -7,7 +7,9 @@ const StockScreener = () => (
     <h4>How does the stock screener work?</h4>
     <TagsContainer>
       <Tag icon="✅">Easy to use</Tag>
-      <Tag icon="📄">+2,500 reports</Tag>
+      <Tag type="neutral" icon="📄">
+        +2,500 reports
+      </Tag>
       <Tag icon="🔬">Backed by research</Tag>
     </TagsContainer>
     <p>

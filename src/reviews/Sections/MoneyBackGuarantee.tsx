@@ -8,7 +8,7 @@ const MoneyBackGuarantee = () => (
     <TagsContainer>
       <Tag icon="📈">2 year performance Guarantee</Tag>
       <Tag icon="💵">100% money back guarantee</Tag>
-      <Tag type="neutral" icon="👎">
+      <Tag type="okay" icon="👎">
         No free trial
       </Tag>
     </TagsContainer>

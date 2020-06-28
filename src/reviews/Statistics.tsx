@@ -147,7 +147,7 @@ const data = [
     name: 'Max Drawdown 36 months',
     value: '-22.97%',
     tag: {
-      type: 'neutral',
+      type: 'okay',
       icon: '😐',
       label: 'Acceptable',
     },
@@ -177,9 +177,9 @@ const data = [
     name: 'Average holding period',
     value: '408 days',
     tag: {
-      type: 'neutral',
+      type: 'okay',
       icon: '📆',
-      label: 'Reasonable',
+      label: 'Long periods',
     },
   },
 ]
