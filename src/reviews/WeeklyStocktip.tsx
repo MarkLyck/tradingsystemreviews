@@ -48,7 +48,9 @@ const WeeklyStocktipReview = () => (
       <h4>How does it beat the market?</h4>
       <TagsContainer>
         <Tag icon="📈">Value investing</Tag>
-        <Tag icon="🤖">Algorithmic</Tag>
+        <Tag type="neutral" icon="🤖">
+          Algorithmic
+        </Tag>
         <Tag icon="👍">Proven strategy</Tag>
         <Tag icon="🤖">Responsible AI</Tag>
         <Tag icon="💯">High quality companies</Tag>
@@ -111,18 +113,20 @@ const WeeklyStocktipReview = () => (
         </li>
       </ul>
       <p>
-        Weekly Stocktip says the system uses these factors to invest in high quality, profitable companies with good
-        growth & low risk, that treat their investors well and only buy stocks with a large margin of safety.
+        Weekly Stocktip uses these factors to invest in high quality, profitable companies with good growth & low risk,
+        that treat their investors well and only buy stocks with a large margin of safety. [TODO elaborate on this
+        sentence and what it means to treat their investors well.]
       </p>
-      <p>I was curious how much of this is Artificial Intelligence or machine learning. Here's what they said:</p>
+      <p>I was curious how much of the system Artificial Intelligence or machine learning. Here's what they said:</p>
       <Quote author="Weekly Stocktip">
         "The <b>AI part is not deeply integrated into the algorithms</b>. Instead, it's a thin layer that takes all the
         outputs of the algorithms and uses statistical probability to sum it all up to a more user-friendly score
-        between -100 and +100, which is what we call the AI Score."
+        between -100 and +100, which is what we call the AI Score." [TODO: explain AI part better, Grace thought this
+        was really confusing. The ai part generates the user friendly score. ]
       </Quote>
       <p>
         I am glad to see the whole system isn't just a machine learning algorithm, but there's actual logic backing
-        everything up.
+        everything up. [TODO: explain this better. She likes this part but finds it contradictory to the quote]
       </p>
       <p>
         If you are considering subscribing to Weekly Stocktip, I would recommend reading their{' '}
@@ -133,20 +137,18 @@ const WeeklyStocktipReview = () => (
       </p>
       <p>
         Value investing is a <b>long proven strategy</b>. Combining that with an algorithmic trading approach that can
-        identify bargains in the stock market is very promising. I'll give this strategy a big 👍 (if it actually works)
+        identify bargains in the stock market is very promising. I'll give this strategy a big 👍
       </p>
     </section>
+    {/* TODO - move to before Strategy */}
     <section data-type="statistics">
       <h2>Statistics</h2>
       <h4>Show me the numbers!</h4>
       <TagsContainer>
-        <Tag icon="💯">Excellent win ratio</Tag>
-        <Tag icon="💯">Excellent average return</Tag>
+        <Tag icon="✅">Excellent statistics</Tag>
         <Tag type="neutral" icon="📆">
           Reasonable holding period
         </Tag>
-        <Tag icon="💯">Excellent Gain-to-pain ratio</Tag>
-        <Tag icon="💯">Excellent Sortino ratio</Tag>
         <Tag icon="✅">Reliable testing period</Tag>
         <Tag type="worst" icon="👎">
           high max drawdown in recessions
@@ -175,24 +177,25 @@ const WeeklyStocktipReview = () => (
       </p>
       <p>
         Over what period are these statistics recorded? Perhaps they chose an exceptional year to run their statistics.
-        A typical red flag I often see in trading systems.
+        A typical red flag I often see in other trading systems.
       </p>
       <p>
-        However, after digging deeper, you'll find that these numbers are averages from 1970 to 2020. That means{' '}
-        <b>the system has been through several market crashes</b> and all sorts of market situations unscathed. I cannot
-        understate the importance of making sure that trading systems and their statistics are recorded over an
-        acceptable period and not just during a bull run!
+        However, after digging deeper, for Weekly Stocktip you'll find that these numbers are averages from 1970 to
+        2020. That means <b>the system has been through several market crashes</b> and all sorts of market situations
+        unscathed. I cannot understate the importance of making sure that trading systems and their statistics are
+        recorded over an acceptable period and not just during a bull run!
       </p>
       <p>
         But making sure the recorded statistics are over an acceptable period isn't enough to validate this either. The
-        backtest could be flawed or straight-up fabricated. We'll get into that later in the review.
+        backtest could be flawed or fabricated. We'll get into that later in the review.
       </p>
       <p>
-        I also looked at the numbers for the realtime results from their launch from 2009 to 2020. The numbers from this
-        period were actually slightly better but still statistically close to the numbers from the full period (which is
-        essential.) Weekly Stocktip said:
+        I also looked at the numbers for the realtime results since their launch from 2009 to 2020. The numbers from
+        this period were actually slightly better but still statistically close to the numbers from the full period
+        (which is essential.) Weekly Stocktip said:
       </p>
       <Quote author="Weekly Stocktip">
+        {/* TODO make this quote better. */}
         "The statistics since our launch in 2009 are incorporated into the overall statistics. However, keep in mind
         that we haven't hit a major market crash since we launched, making the statistics look better than it should be
         in the long-term. The 1970-2020 statistics provide more accurate and realistic expectations as it has been
@@ -200,8 +203,8 @@ const WeeklyStocktipReview = () => (
       </Quote>
       <p>
         So far, everything looks promising, but there's one more question you must ask when it comes to validating win
-        ratios: whether they hold their losers indefinitely and never sell them? Everyone can get a +100% win ratio if
-        they never sell the losers or only made a very few lucky trades!
+        ratios: Do they hold their losers indefinitely and never sell them? Everyone can get a +100% win ratio if they
+        never sell the losers or only made a very few lucky trades!
       </p>
       <p>
         The Weekly Stocktip system executed +2,500 trades in the period from 1970 to 2020. I believe that there are
@@ -257,9 +260,9 @@ const WeeklyStocktipReview = () => (
         </a>
       </p>
       <p>
-        I will actually use this article as a standard for all backtests I'm reviewing in the future. If you are
-        considering signing up for Weekly Stocktip, I encourage you to read this article in depth and make your own
-        judgment.
+        {/* TODO this sounds too biased, remove will use as a standard, remove if you are considering */}I will actually
+        use this article as a standard for all backtests I'm reviewing in the future. If you are considering signing up
+        for Weekly Stocktip, I encourage you to read this article in depth and make your own judgment.
       </p>
       <p>
         Weekly Stocktip's backtesting methodologies passes all tests I could think of. Most importantly, their
@@ -303,8 +306,9 @@ const WeeklyStocktipReview = () => (
       </p>
       <p>
         Transparency is vital for trading systems, so I'm pleased to see{' '}
-        <b>what you get in the dashboard match the marketing fluff on their website!</b> Usually, on the site, you see a
-        few examples of "amazing" investments, and they never give out an expansive list of the latest trades.
+        {/* TODO explain that it's OTHER companies that usually put fake investments */}
+        <b>what you get in the dashboard matches the marketing fluff on their website!</b> Usually, on the site, you see
+        a few examples of "amazing" investments, and they never give out an expansive list of the latest trades.
       </p>
       <p>
         I'll give Weekly Stocktip a 10/10 for transparency showing the latest signals, whether positive or negative.
@@ -332,8 +336,8 @@ const WeeklyStocktipReview = () => (
         stocks and can't write it all off as "pure" profit just yet.
       </p>
       <p>
-        I invested roughly $10,000 dollar-cost averaging into the system every week, and my total return on investment
-        was <b>+61.78%</b>
+        {/* TODO makes it sound like you invested 10k every week. */}I invested roughly $10,000 dollar-cost averaging
+        into the system every week, and my total return on investment was <b>+61.78%</b>
       </p>
       <p>During my subscription so far, I received six sell signals:</p>
       <Image src="/static/weeklystocktip/sell_signals.jpg" alt="sell signals" />
@@ -356,7 +360,7 @@ const WeeklyStocktipReview = () => (
       <p>All in all, the signals so far have been performing much better than expected. </p>
       <p>
         <b>Disclaimer: The entire stock market was bullish during the period of my review</b>. It's hard to know how
-        much of my success to attribute to Weekly Stocktip vs. just the market in general.)
+        much of my success to attribute to Weekly Stocktip vs. just the market in general.
       </p>
       <p>
         But given the company's transparency, you should be able to review their real-time performance and latest sell
@@ -367,6 +371,7 @@ const WeeklyStocktipReview = () => (
         once I've cycled through the portfolio.
       </p>
     </section>
+    {/* TODO move risk further up. */}
     <Risk />
     <Signals />
     <StockScreener />

@@ -12,6 +12,13 @@ export const globalStyles = css`
     color: #1d2b3d;
   }
 
+  #__next {
+    height: 100%;
+    > div {
+      height: 100%;
+    }
+  }
+
   ${cssReset}
   ${typography}
 `
