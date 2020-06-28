@@ -127,6 +127,7 @@ const Reviews = () => {
   const router = useRouter()
   return (
     <TableContainer>
+      {/* @ts-ignore */}
       <Table dataSource={dataSource} columns={columns} onRow={onRow(router)} />
     </TableContainer>
   )
