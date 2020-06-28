@@ -16,7 +16,7 @@ const Signals = () => (
     <p>Here's what a Weekly Stocktip signal looks like:</p>
     <Image src="/static/weeklystocktip/buy_signal.png" alt="Buy signal" />
     <p>
-      TThis just means: "<b>buy AG at a price near $9.20</b>". They also show that the current trading price is $8.97
+      This just means: "<b>buy AG at a price near $9.20</b>". They also show that the current trading price is $8.97
       (2.5% less than the recommended price.) That means you can actually buy this stock cheaper than the system
       recommended, which is good if you haven't already bought it.
     </p>

@@ -184,6 +184,8 @@ const data = [
   },
 ]
 
+// TODO at links to Investopedia.
+
 const Statistics = () => (
   <Container>
     <Table columns={columns} dataSource={data} pagination={false} />
