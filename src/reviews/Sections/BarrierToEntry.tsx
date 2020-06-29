@@ -6,10 +6,12 @@ const BarrierToEntry = () => (
     <h2>Barrier to Entry</h2>
     <h4>Who can use it, and how much setup, time and preparation is required?</h4>
     <TagsContainer>
-      <Tag icon="🌎">Accessible from anywhere in the world</Tag>
-      <Tag icon="👍">Simple BUY/SELL signals</Tag>
+      <Tag type="neutral" icon="💵">
+        Simple BUY/SELL signals
+      </Tag>
       <Tag icon="🎉">No training required</Tag>
-      <Tag icon="💰">Affordable price</Tag>
+      <Tag icon="💰">Affordable cost</Tag>
+      <Tag icon="🌎">Accessible from anywhere in the world</Tag>
     </TagsContainer>
     <p>The barrier to entry for Weekly Stocktip is very low.</p>
     <ul>

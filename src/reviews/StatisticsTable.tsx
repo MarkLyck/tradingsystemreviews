@@ -67,9 +67,9 @@ const data = [
     name: 'Avg. loss of a losing investment',
     value: '-16.47%',
     tag: {
-      type: 'excellent',
-      icon: '👍',
-      label: 'Good',
+      type: 'neutral',
+      icon: '😐',
+      label: 'Decent',
     },
   },
   {
@@ -149,7 +149,7 @@ const data = [
     tag: {
       type: 'okay',
       icon: '😐',
-      label: 'Acceptable',
+      label: 'A little high',
     },
   },
   {
@@ -184,7 +184,7 @@ const data = [
   },
 ]
 
-// TODO at links to Investopedia.
+// TODO add links to Investopedia.
 
 const Statistics = () => (
   <Container>

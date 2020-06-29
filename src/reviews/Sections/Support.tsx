@@ -7,7 +7,6 @@ const Support = () => (
     <h4>How good and honest is the support they provide?</h4>
     <TagsContainer>
       <Tag icon="⚡">Usually responds in under 5 minutes</Tag>
-      <Tag icon="🤝">Honest</Tag>
       <Tag icon="🎓">knowledgeable about investing</Tag>
     </TagsContainer>
     <p>

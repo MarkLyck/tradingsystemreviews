@@ -10,9 +10,13 @@ import ReviewInProgress from '~/ui-components/Tag/ReviewInProgress'
 const TableContainer = styled.div`
   table {
     box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.08);
+    td,th {
+      white-space: nowrap;
+    }
   }
   tbody {
-    tr:hover {
+    tr: {
+      &:hover {
       cursor: pointer;
     }
   }
