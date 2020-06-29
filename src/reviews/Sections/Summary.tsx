@@ -9,10 +9,10 @@ const Summary = () => (
       their results. It is straightforward to use, and the signals I invested in all turned out profitable.
     </h4>
     <TagsContainer>
-      <Tag icon="📈">High reward</Tag>
+      <Tag icon="📈">High potential reward</Tag>
       <Tag icon="👌">Low risk</Tag>
       <Tag icon="🔎">Transparent company</Tag>
-      <Tag icon="💯">Excellent Track record</Tag>
+      <Tag icon="👍">Good Track record</Tag>
       <Tag icon="📈">Consistently beats the Stock Market</Tag>
       <Tag icon="💰">100% Money Back Guarantee</Tag>
       <Tag icon="📈">Performance Guarantee</Tag>
@@ -26,7 +26,11 @@ const Summary = () => (
     <p>
       I hope you found this review useful and learned some more about what this trading system can and can't do for you.
     </p>
-    <p>All the best, Michael.</p>
+    <p>
+      All the best, Michael.
+      <br />
+      Professional investor for +10 years
+    </p>
   </section>
 )
 

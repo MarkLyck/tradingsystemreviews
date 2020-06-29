@@ -14,8 +14,8 @@ const dataSource = [
     averageReturn: 94.85,
     holdingPeriod: '408 days',
     score: 96,
-    risk: 'low',
-    effort: 'low',
+    risk: 'very low',
+    effort: 'very low',
     reviewLink: '/reviews/weeklystocktip',
   },
   {

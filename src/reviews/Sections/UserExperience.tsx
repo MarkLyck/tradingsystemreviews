@@ -6,10 +6,11 @@ const Support = () => (
     <h2>User Experience</h2>
     <h4>How user friendly is Weekly Stocktip?</h4>
     <TagsContainer>
-      <Tag icon="👌">Super easy to use</Tag>
-      <Tag icon="⏲️">Takes under 10 minutes a week to use</Tag>
-      <Tag icon="💬">simple SMS signals</Tag>
-      <Tag icon="🖥">Beautiful dashboard</Tag>
+      <Tag icon="👌">Easy to use</Tag>
+      <Tag type="neutral" icon="💬">
+        SMS signals
+      </Tag>
+      <Tag icon="🖥">Nice dashboard</Tag>
     </TagsContainer>
     <p>
       Using Weekly Stocktip was very simple. The signals are simple and easy to follow, and since it only trades one
