@@ -2,18 +2,24 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styled from 'styled'
-import { Table, Tag, Space } from 'antd'
-import dataSource, { IN_PROGRESS, PENDING } from './data'
+import { Table, Space } from 'antd'
+import { Tag } from '~/ui-components/Tag'
+import dataSource, { IN_PROGRESS, PENDING, SCAM, UNKNOWN, UNDISCLOSED } from './data'
 import PendingReview from '~/ui-components/Tag/PendingReview'
 import ReviewInProgress from '~/ui-components/Tag/ReviewInProgress'
 
 const TableContainer = styled.div`
+  .ant-table-container {
+    overflow: auto;
+  }
+
   table {
     box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.08);
     td,th {
       white-space: nowrap;
     }
   }
+  
   tbody {
     tr: {
       &:hover {
@@ -29,6 +35,7 @@ const NotAvailableText = styled.p`
 
 const NotAvailable = () => <NotAvailableText>N/A</NotAvailableText>
 const Undisclosed = () => <NotAvailableText>Undisclosed</NotAvailableText>
+const Unknown = () => <NotAvailableText>Unknown</NotAvailableText>
 
 const columns = [
   {
@@ -60,7 +67,7 @@ const columns = [
     dataIndex: 'strategy',
     key: 'strategy',
     render: (value, review) => {
-      if (value === null) return <Undisclosed />
+      if (value === UNDISCLOSED) return <Undisclosed />
       if (!value) return <NotAvailable />
 
       return value
@@ -71,7 +78,7 @@ const columns = [
     dataIndex: 'winRate',
     key: 'winRate',
     render: (value) => {
-      if (value === null) return <Undisclosed />
+      if (value === UNDISCLOSED) return <Undisclosed />
       if (!value) return <NotAvailable />
       return `${value.toFixed(2)}%`
     },
@@ -81,10 +88,10 @@ const columns = [
     dataIndex: 'averageReturn',
     key: 'averageReturn',
     render: (value) => {
-      if (value === null) return <Undisclosed />
+      if (value === UNDISCLOSED) return <Undisclosed />
       if (!value) return <NotAvailable />
 
-      return `+${value.toFixed(2)}%`
+      return `${value > 0 ? '+' : ''}${value.toFixed(2)}%`
     },
   },
   {
@@ -92,8 +99,9 @@ const columns = [
     dataIndex: 'risk',
     key: 'risk',
     render: (value) => {
-      if (value === null) return <Undisclosed />
+      if (value === UNDISCLOSED) return <Undisclosed />
       if (!value) return <NotAvailable />
+      if (value === UNKNOWN) return <Unknown />
 
       return `${value}`
     },
@@ -103,7 +111,7 @@ const columns = [
     dataIndex: 'effort',
     key: 'effort',
     render: (value) => {
-      if (value === null) return <Undisclosed />
+      if (value === UNDISCLOSED) return <Undisclosed />
       if (!value) return <NotAvailable />
 
       return `${value}`
@@ -114,7 +122,7 @@ const columns = [
     dataIndex: 'holdingPeriod',
     key: 'holdingPeriod',
     render: (value) => {
-      if (value === null) return <Undisclosed />
+      if (value === UNDISCLOSED) return <Undisclosed />
       if (!value) return <NotAvailable />
 
       return value
@@ -125,7 +133,7 @@ const columns = [
     dataIndex: 'price',
     key: 'Price',
     render: (value) => {
-      if (value === null) return <Undisclosed />
+      if (value === UNDISCLOSED) return <Undisclosed />
       if (!value) return <NotAvailable />
 
       return value
@@ -142,6 +150,14 @@ const columns = [
       }
       if (review.status === PENDING) {
         return <PendingReview />
+      }
+
+      if (value === SCAM) {
+        return (
+          <Tag type="worst" variant="hollow" icon="👎">
+            SCAM
+          </Tag>
+        )
       }
 
       return `${value}/100`

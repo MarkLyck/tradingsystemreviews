@@ -12,8 +12,9 @@ const Text = styled.span`
 `
 
 const Container = styled.div`
-  background-color: ${(props: any) => props.backgroundColor};
-  color: ${(props) => props.color};
+  background-color: ${(props: any) => (props.variant === 'filled' ? props.backgroundColor : 'white')};
+  border: ${(props: any) => (props.variant !== 'filled' ? `2px solid ${props.backgroundColor}` : 'none')};
+  color: ${(props) => (props.variant !== 'filled' ? props.backgroundColor : props.color)};
   padding: 8px 12px;
   border-radius: 4px;
   font-size: 14px;
@@ -25,10 +26,10 @@ const Container = styled.div`
 export const Tag = ({ type = 'excellent', variant = 'filled', icon, children }) => {
   let color = theme.palette.scale[type].color
   let backgroundColor = theme.palette.scale[type].background
-  if (variant === 'hollow') backgroundColor = theme.palette.white
+  // if (variant === 'hollow') backgroundColor = theme.palette.white
 
   return (
-    <Container className="tag" color={color} backgroundColor={backgroundColor}>
+    <Container className="tag" variant={variant} color={color} backgroundColor={backgroundColor}>
       <IconContainer>{icon}</IconContainer>
       <Text>{children}</Text>
     </Container>
